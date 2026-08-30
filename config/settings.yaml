@@ -1,0 +1,38 @@
+# Configurazione centrale del progetto.
+# Modifica qui simboli e parametri di default: i moduli leggono da questo file,
+# così non serve toccare il codice per cambiare cosa monitorare.
+
+watchlist:
+  equities:
+    - AAPL
+    - MSFT
+    - ENEL.MI     # esempio titolo Borsa Italiana (suffisso .MI)
+  etfs:
+    - SPY
+    - VWCE.DE     # ETF Vanguard All-World, quotato a Francoforte
+  crypto:
+    - BTC/USDT
+    - ETH/USDT
+  forex:
+    - EUR/USD     # Twelve Data richiede lo slash tra le due valute
+    - GBP/USD
+    - USD/JPY
+
+default_timeframe: "1d"       # 1m, 5m, 15m, 1h, 1d, 1wk ...
+default_lookback_days: 365
+
+cache:
+  directory: "data_cache"
+  format: "parquet"           # formato di salvataggio locale
+
+indicators:
+  sma_periods: [20, 50, 200]
+  ema_periods: [12, 26]
+  rsi_period: 14
+  macd: [12, 26, 9]           # fast, slow, signal
+  bollinger:
+    period: 20
+    std_dev: 2
+
+exchanges:
+  crypto_default: "binance"   # exchange usato da ccxt per i dati crypto
