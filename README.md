@@ -1,4 +1,4 @@
-# Trading Analytics
+# FinalFinance
 
 Progetto a moduli progressivi: dashboard di analisi → backtesting e modelli
 di previsione → trading automatico simulato → (sperimentale) ricerca di
@@ -11,7 +11,7 @@ reali.**
 ## Struttura
 
 ```
-trading-analytics/
+FinalFinance/
 ├── config/
 │   └── settings.yaml         # watchlist, timeframe, parametri indicatori — modifica qui
 ├── src/
@@ -60,7 +60,7 @@ trading-analytics/
 ## Avvio della dashboard (Modulo 1)
 
 ```bash
-cd trading-analytics
+cd FinalFinance
 python -m venv .venv && source .venv/bin/activate   # opzionale ma consigliato
 pip install -r requirements.txt
 python -m streamlit run src/dashboard/0_Analisi.py
